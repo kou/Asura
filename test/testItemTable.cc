@@ -128,7 +128,7 @@ static bool assertCrossJoinForeach(const ItemGroup *itemGroup,
 }
 
 struct AssertInnerJoinForeachArg {
-	vector<pair<int,int> > joinedRowsIndexVector;
+	vector<pair<int,int>> joinedRowsIndexVector;
 	size_t idx;
 };
 
@@ -363,7 +363,7 @@ void test_innerJoin(void)
 	cut_assert_not_null(z_table);
 
 	// check the result
-	vector<pair<int,int> > joinedRowsIndexVector;
+	vector<pair<int,int>> joinedRowsIndexVector;
 	for (size_t i = 0; i < NUM_TABLE0; i++) {
 		TableStruct0 *tbl0 = &tableContent0[i];
 		for (size_t j = 0; j < NUM_TABLE1; j++) {
