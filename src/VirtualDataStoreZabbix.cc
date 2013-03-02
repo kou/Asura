@@ -23,6 +23,13 @@
 #include "ItemEnum.h"
 #include "VirtualDataStoreZabbixMacro.h"
 
+#define ADD_AS_NULL(X) \
+do { \
+  grp->add(X, false); \
+  size_t num = grp->getNumberOfItems(); \
+  grp->getItemAt(num-1)->setNull(); \
+} while (0)
+
 GMutex VirtualDataStoreZabbix::m_mutex;
 VirtualDataStoreZabbix *VirtualDataStoreZabbix::m_instance = NULL;
 
