@@ -36,6 +36,7 @@ public:
 protected:
 	string getInitialJsonRequest(void);
 	bool parseInitialResponse(SoupMessage *msg);
+	void getTrigger(void);
 	bool mainThreadOneProc(void);
 	void startObject(JsonParserAgent &parser, const string &name);
 	void startElement(JsonParserAgent &parser, int index);
